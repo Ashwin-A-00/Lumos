@@ -1,10 +1,6 @@
 <h1 align="center">🌙🎧 Lumos — A Lo-Fi Audio Experience</h1>
 
 <p align="center">
-  <img src="https://your-image-url/logo.png" alt="Lumos Logo" width="120" />
-</p>
-
-<p align="center">
   A cozy, aesthetic music player built with React, Tailwind CSS, and Vite — inspired by lo-fi cafés and vinyl culture. ☕📀  
 </p>
 
