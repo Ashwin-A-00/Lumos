@@ -1,0 +1,337 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Lumos Design System - Ambient Study Room Colors & Effects
+All colors MUST be HSL for proper theming.
+*/
+
+@layer base {
+  :root {
+    /* Default Lumos Palette (Library Theme) */
+    --background: 45 15% 97%;
+    --foreground: 25 30% 15%;
+
+    --card: 45 25% 98%;
+    --card-foreground: 25 25% 15%;
+
+    --popover: 45 20% 98%;
+    --popover-foreground: 25 25% 15%;
+
+    /* Cozy Gold Primary */
+    --primary: 45 85% 70%;
+    --primary-foreground: 25 30% 15%;
+    --primary-glow: 45 90% 75%;
+
+    /* Deep Espresso Secondary */
+    --secondary: 25 15% 20%;
+    --secondary-foreground: 45 25% 95%;
+
+    /* Soft Cream Muted */
+    --muted: 45 20% 96%;
+    --muted-foreground: 25 15% 50%;
+
+    /* Warm Accent */
+    --accent: 35 70% 75%;
+    --accent-foreground: 25 30% 15%;
+
+    --destructive: 0 65% 60%;
+    --destructive-foreground: 45 25% 95%;
+
+    --border: 45 15% 90%;
+    --input: 45 15% 95%;
+    --ring: 45 85% 70%;
+
+    /* Magical Effects */
+    --glow-primary: 45 85% 70%;
+    --glow-accent: 35 70% 75%;
+    --shadow-warm: 45 50% 85%;
+    
+    /* Gradients */
+    --gradient-cozy: linear-gradient(135deg, hsl(45 85% 70% / 0.1), hsl(35 70% 75% / 0.1));
+    --gradient-glow: radial-gradient(circle, hsl(45 85% 70% / 0.3), transparent);
+    --gradient-ambient: linear-gradient(180deg, hsl(45 25% 98%), hsl(45 15% 95%));
+
+    /* Animation Variables */
+    --transition-magic: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-glow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 1rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  /* Café Glow Theme */
+  :root.cafe-theme {
+    /* Café Color Palette */
+    --background: 0 12% 22%; /* Mocha Brown */
+    --foreground: 40 60% 96%; /* Cream White */
+
+    --card: 30 30% 52%; /* Soft Caramel */
+    --card-foreground: 40 60% 96%;
+
+    --popover: 0 14% 12%; /* Deep Espresso */
+    --popover-foreground: 40 60% 96%;
+
+    /* Warm Amber Primary */
+    --primary: 40 85% 72%; /* Warm Amber */
+    --primary-foreground: 0 12% 22%;
+    --primary-glow: 40 90% 78%;
+
+    /* Rosewood Secondary */
+    --secondary: 0 40% 50%; /* Rosewood Red */
+    --secondary-foreground: 40 60% 96%;
+
+    /* Soft Caramel Muted */
+    --muted: 30 25% 35%;
+    --muted-foreground: 40 30% 75%;
+
+    /* Deep Espresso Accent */
+    --accent: 0 14% 12%; /* Deep Espresso */
+    --accent-foreground: 40 60% 96%;
+
+    --destructive: 0 65% 60%;
+    --destructive-foreground: 40 60% 96%;
+
+    --border: 30 20% 30%;
+    --input: 30 25% 25%;
+    --ring: 40 85% 72%;
+
+    /* Café Magical Effects */
+    --glow-primary: 40 85% 72%;
+    --glow-accent: 0 40% 50%;
+    --shadow-warm: 0 14% 12%;
+    
+    /* Café Gradients */
+    --gradient-cozy: linear-gradient(135deg, hsl(40 85% 72% / 0.2), hsl(0 40% 50% / 0.1));
+    --gradient-glow: radial-gradient(circle, hsl(40 85% 72% / 0.4), transparent);
+    --gradient-ambient: linear-gradient(180deg, hsl(0 12% 22%), hsl(0 14% 12%));
+
+    --sidebar-background: 0 14% 12%;
+    --sidebar-foreground: 40 30% 75%;
+    --sidebar-primary: 40 85% 72%;
+    --sidebar-primary-foreground: 0 12% 22%;
+    --sidebar-accent: 30 25% 25%;
+    --sidebar-accent-foreground: 40 60% 96%;
+    --sidebar-border: 30 20% 20%;
+    --sidebar-ring: 40 85% 72%;
+  }
+
+  .dark {
+    /* Dark Lumos Theme - Cozy Evening Study */
+    --background: 25 25% 8%;
+    --foreground: 45 20% 95%;
+
+    --card: 25 20% 12%;
+    --card-foreground: 45 20% 95%;
+
+    --popover: 25 20% 10%;
+    --popover-foreground: 45 20% 95%;
+
+    --primary: 45 80% 65%;
+    --primary-foreground: 25 30% 15%;
+    --primary-glow: 45 85% 70%;
+
+    --secondary: 25 15% 15%;
+    --secondary-foreground: 45 20% 90%;
+
+    --muted: 25 15% 15%;
+    --muted-foreground: 45 10% 65%;
+
+    --accent: 35 65% 70%;
+    --accent-foreground: 25 30% 15%;
+
+    --destructive: 0 60% 55%;
+    --destructive-foreground: 45 20% 95%;
+
+    --border: 25 15% 20%;
+    --input: 25 15% 18%;
+    --ring: 45 80% 65%;
+
+    /* Dark Mode Magical Effects */
+    --glow-primary: 45 80% 65%;
+    --glow-accent: 35 65% 70%;
+    --shadow-warm: 25 30% 25%;
+    
+    /* Dark Gradients */
+    --gradient-cozy: linear-gradient(135deg, hsl(45 80% 65% / 0.15), hsl(35 65% 70% / 0.15));
+    --gradient-glow: radial-gradient(circle, hsl(45 80% 65% / 0.4), transparent);
+    --gradient-ambient: linear-gradient(180deg, hsl(25 20% 12%), hsl(25 25% 8%));
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+
+  /* Import Google Fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+}
+
+@layer components {
+  /* Magical Glow Effects */
+  .glow-primary {
+    box-shadow: 0 0 20px hsl(var(--glow-primary) / 0.4), 0 0 40px hsl(var(--glow-primary) / 0.2);
+  }
+  
+  .glow-accent {
+    box-shadow: 0 0 15px hsl(var(--glow-accent) / 0.3), 0 0 30px hsl(var(--glow-accent) / 0.15);
+  }
+
+  /* Floating Animation */
+  .float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  /* Breathing Animation - Enhanced */
+  .breathe {
+    animation: breathe 6s ease-in-out infinite;
+  }
+
+  @keyframes breathe {
+    0%, 100% { 
+      transform: scale(1) translateY(0px);
+      opacity: 0.9;
+    }
+    50% { 
+      transform: scale(1.02) translateY(-2px);
+      opacity: 1;
+    }
+  }
+
+  /* Glassmorphism Base */
+  .glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .glass-card {
+    background: hsl(var(--card) / 0.7);
+    backdrop-filter: blur(24px);
+    border: 1px solid hsl(var(--border) / 0.3);
+    box-shadow: 
+      0 8px 32px hsl(var(--foreground) / 0.1),
+      inset 0 1px 0 hsl(var(--background) / 0.2);
+  }
+
+  .glass-panel {
+    background: hsl(var(--card) / 0.6);
+    backdrop-filter: blur(16px);
+    border: 1px solid hsl(var(--border) / 0.2);
+    box-shadow: 
+      0 4px 24px hsl(var(--foreground) / 0.08),
+      inset 0 1px 0 hsl(var(--background) / 0.15);
+  }
+
+  /* Ambient Background with Theme Support */
+  .ambient-bg {
+    background: var(--gradient-ambient);
+    position: relative;
+    transition: background 1s ease-in-out;
+  }
+
+  .ambient-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient-cozy);
+    opacity: 0.6;
+    pointer-events: none;
+    transition: background 1s ease-in-out, opacity 0.5s ease;
+  }
+
+  /* Study Timer Glow */
+  .timer-glow {
+    position: relative;
+  }
+
+  .timer-glow::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    background: var(--gradient-glow);
+    border-radius: 50%;
+    z-index: -1;
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { 
+      opacity: 0.3; 
+      transform: translate(-50%, -50%) scale(1);
+      filter: blur(1px);
+    }
+    50% { 
+      opacity: 0.6; 
+      transform: translate(-50%, -50%) scale(1.1);
+      filter: blur(0px);
+    }
+  }
+
+  /* Smooth Transitions */
+  * {
+    transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Enhanced Smooth Scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Smooth Focus States */
+  *:focus {
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Sleek Button Interactions */
+  button, .interactive {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center;
+  }
+
+  button:hover, .interactive:hover {
+    transform: translateY(-1px);
+  }
+
+  button:active, .interactive:active {
+    transform: translateY(0px) scale(0.98);
+  }
+}
