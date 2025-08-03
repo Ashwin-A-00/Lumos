@@ -8,13 +8,6 @@
   A cozy, aesthetic music player built with React, Tailwind CSS, and Vite — inspired by lo-fi cafés and vinyl culture. ☕📀  
 </p>
 
-<p align="center">
-  <a href="#features">Features</a> •
-  <a href="#tech-stack">Tech Stack</a> •
-  <a href="#getting-started">Getting Started</a> •
-  <a href="#screenshots">Screenshots</a> •
-  <a href="#acknowledgements">Acknowledgements</a>
-</p>
 
 ---
 
